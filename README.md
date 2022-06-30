@@ -2,7 +2,9 @@
 
 Slow Cheetah is an exploit that initiates and catches a reverse shell from a Cisco ASA-X with FirePOWER Services device via SSH. Slow Cheetah works by either installing a Cisco provided [ASA FirePOWER module boot image](https://software.cisco.com/download/home/286283326/type/286277393/release/6.2.3) and then exploiting it for a root shell *or* installing an attacker created malicious ISO as the FirePOWER module boot image (see: [pinchme](https://github.com/jbaines-r7/pinchme)).
 
-To install a boot image, the attacker must be highly privileged. The attack requires Cisco ASA CLI credentials *and* the enable password. However, once installed and exploited, the attacker has a root Linux system that can reach `outside` and `inside` of the ASA. In the following Cisco created image, the attacker finds themselves in the `ASA FirePOWER Inspection` bubble:
+To install a boot image, the attacker must be highly privileged. The attack requires Cisco ASA CLI credentials *and* the enable password. However, once installed and exploited, the attacker has a root Linux system that can reach `outside` and `inside` of the ASA. In the following [Cisco](https://www.cisco.com/c/en/us/td/docs/security/asa/quick_start/sfr/firepower-qsg.html) created image, the attacker finds themselves in the `ASA FirePOWER Inspection` bubble:
+
+![371444](https://user-images.githubusercontent.com/91965877/176665909-50607fca-13b4-4ac4-8247-b348fe6f800a.jpg)
 
 Exploiting the boot image has a major drawback in that it will not survive a reboot.
 
